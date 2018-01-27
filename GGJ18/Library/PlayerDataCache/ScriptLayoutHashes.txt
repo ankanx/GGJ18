@@ -163,8 +163,11 @@ a53a9029296685c0704f8f8c1f027305 Assembly-CSharp.dll:.RngPlatforms
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LadderZone
 2984409314dc1b9e169db47ef17bdb9a Assembly-CSharp.dll:.EnemyPatrol
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DestroyItems
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameOver
 97d6bbb8271dec724845c8b84e5bd10b Assembly-CSharp.dll:.PlayerHealth
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DestroyItems
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.stardustAwake
+6c072b39b3c68413bc432aaada417754 Assembly-CSharp.dll:.Checkpoint
+afbe6989f5be1a528e7c45cb3a5f22a3 Assembly-CSharp.dll:.LevelManager
+6c072b39b3c68413bc432aaada417754 Assembly-CSharp.dll:.KillPlayer
 61d4b28324372662a1529793abf1c6ae Assembly-CSharp.dll:.pulsatingtext

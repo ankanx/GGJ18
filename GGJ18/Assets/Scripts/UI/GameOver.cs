@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour {
 	
 	public void Quit() {
-		//Application.Quit();
+		Application.Quit();
 	}
 	
 	public void Retry () {
@@ -15,8 +15,7 @@ public class GameOver : MonoBehaviour {
 	}
 
 	public void Menu() {
-		//Debug.Log("TODO Menu() in GameOver script.");
-		 //SceneManager.LoadScene("Menues");
-	}
+        SceneManager.LoadScene(1);
+    }
 
 }
