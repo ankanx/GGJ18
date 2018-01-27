@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Default_Scene.unity
+- path: Assets/Scenes/Levels/SplashScreen.unity
   isLoaded: 1
   isActive: 1
