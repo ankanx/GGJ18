@@ -32,7 +32,14 @@ public class InputScript : MonoBehaviour
     {
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         Debug.Log(grounded);
-
+        if (grounded)
+        {
+            anim.SetBool("jumpcomplete", true);
+        }
+        else
+        {
+            anim.SetBool("jumpcomplete", false);
+        }
         if (Input.GetButtonDown("Jump") && grounded)
         {
             jump = true;
