@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Levels/Level0.unity
-=======
-- path: Assets/Scenes/Demo/Chekpoint_test.unity
->>>>>>> checkpoint
   isLoaded: 1
   isActive: 1
