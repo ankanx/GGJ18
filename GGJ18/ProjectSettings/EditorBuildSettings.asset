@@ -12,5 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Menues/MainMenu.unity
     guid: e09cfaf7cc1b33a45a2986193fdfc629
   - enabled: 1
-    path: Assets/Scenes/Demo/Default_Scene.unity
+    path: Assets/Scenes/Demo/Zombie_testscnene.unity
     guid: 0fad5684a07703f4a9db771f22e72868
+  - enabled: 1
+    path: Assets/Scenes/Levels/NewGame.unity
+    guid: 94a8b33b509710f42befc9c1f3bafc81
