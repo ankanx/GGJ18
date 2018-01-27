@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Demo/Chekpoint_test.unity
+=======
+- path: Assets/Scenes/Menues/MainMenu.unity
+>>>>>>> eatingbranch
   isLoaded: 1
   isActive: 1
