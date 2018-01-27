@@ -109,4 +109,11 @@ public class InputScript : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Cookie")){
+            Destroy(collision.gameObject);
+        }
+    }
 }
