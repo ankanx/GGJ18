@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/NewGame.unity
+- path: Assets/Scenes/Demo/Zombie_testscnene.unity
   isLoaded: 1
   isActive: 1
