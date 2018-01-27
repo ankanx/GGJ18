@@ -12,6 +12,7 @@ public class InputScript : MonoBehaviour
     public float maxSpeed = 5f;
     public float jumpForce = 1000f;
     public Transform groundCheck;
+    public Canvas menu;
 
 
     private bool grounded = false;
@@ -35,6 +36,14 @@ public class InputScript : MonoBehaviour
         if (Input.GetButtonDown("Jump") && grounded)
         {
             jump = true;
+        }
+
+        if(Input.GetButtonDown("Menu") && !menu.gameObject.active)
+        {
+            menu.gameObject.SetActive(true);
+        }else if(Input.GetButtonDown("Menu") && menu.gameObject.active)
+        {
+            menu.gameObject.SetActive(false);
         }
     }
 
