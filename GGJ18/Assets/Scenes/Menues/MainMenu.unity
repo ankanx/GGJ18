@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObj: {fileID: 183476206}
-  starDust: {fileID: 1062404410268182, guid: 1f7deef8da7add048af7fd81605eadc0, type: 2}
+  starDust: {fileID: 1062404410268182, guid: a445a6de270c7f748b456d120bddbc0d, type: 2}
   gridX: 5
   gridY: 1
   spacing: 1
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObj: {fileID: 285801190}
-  starDust: {fileID: 1062404410268182, guid: 158ad587403383b4d9be72fb73bbd776, type: 2}
+  starDust: {fileID: 1062404410268182, guid: fe213083bb8a0724bbca0e635c0cd3ba, type: 2}
   gridX: 5
   gridY: 1
   spacing: 1
@@ -756,7 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObj: {fileID: 1099026823}
-  starDust: {fileID: 1062404410268182, guid: 508c0d5e5b2638549a147c67ba646773, type: 2}
+  starDust: {fileID: 1062404410268182, guid: 918d954f67bccb74cb6150374101e4b1, type: 2}
   gridX: 5
   gridY: 1
   spacing: 1
@@ -844,7 +844,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObj: {fileID: 1554973088}
-  starDust: {fileID: 1062404410268182, guid: 5e0ed305c4726fb479fea50b6e03614f, type: 2}
+  starDust: {fileID: 1062404410268182, guid: 8c6aed1ac5a8a2e47ae43e6a93d65b92, type: 2}
   gridX: 5
   gridY: 1
   spacing: 1

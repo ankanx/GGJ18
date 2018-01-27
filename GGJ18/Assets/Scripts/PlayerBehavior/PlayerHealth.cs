@@ -20,7 +20,6 @@ public class PlayerHealth : MonoBehaviour
     
     void Awake ()
     {
-	
         currentHealth = startingHealth;
 	    TakeDamage(0);
         msec = 0;
