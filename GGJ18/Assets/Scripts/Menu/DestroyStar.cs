@@ -11,7 +11,7 @@ public class DestroyStar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 15);
     }
 
 
