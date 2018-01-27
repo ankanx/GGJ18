@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-guid: b1068cd002260d346b5924d3f3099fe9
+guid: bb21ec5f84937874697e08d2c23e6932
 folderAsset: yes
-timeCreated: 1517084571
-=======
-guid: 4c0daaae9ede9994da625705637b3439
-folderAsset: yes
-timeCreated: 1517083292
->>>>>>> checkpoint
-=======
-guid: bbfe9fc997b9b1d4da1151a3f8253dc2
-folderAsset: yes
-timeCreated: 1517089681
->>>>>>> checkpoint
+timeCreated: 1517092471
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

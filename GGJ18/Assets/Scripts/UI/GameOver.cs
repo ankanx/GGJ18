@@ -10,8 +10,7 @@ public class GameOver : MonoBehaviour {
 	}
 	
 	public void Retry () {
-		//Debug.Log("Retry");
-		//Application.LoadLevel(Application.loadedLevel);
+		Application.LoadLevel(Application.loadedLevel);
 	}
 
 	public void Menu() {
