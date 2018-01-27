@@ -1,7 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: 6a3716045a7eb5a4098797c18bd7b8da
+folderAsset: yes
+timeCreated: 1517070906
+=======
 guid: a4504b1b97a9a804c9d70148d2e7857a
 folderAsset: yes
 timeCreated: 1517066919
+>>>>>>> menuoverlay
+=======
+guid: cf5cd49fe8cf38144a72029d00b05f55
+folderAsset: yes
+timeCreated: 1517071168
+>>>>>>> backgroundScroll
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

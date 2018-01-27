@@ -14,6 +14,11 @@ public class InputScript : MonoBehaviour
     public Transform groundCheck;
     public Canvas menu;
 
+	public bool onLadder;
+	public float climbSpeed;
+	private float climbVelocity;
+	private float gravityStore;
+
 
     private bool grounded = false;
     private Animator anim;
@@ -25,6 +30,7 @@ public class InputScript : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+		gravityStore = rb2d.gravityScale;
     }
 
     // Update is called once per frame
@@ -57,6 +63,7 @@ public class InputScript : MonoBehaviour
     void FixedUpdate()
     {
         float h = Input.GetAxis("Horizontal");
+		float v = Input.GetAxis ("Vertical");
 
         anim.SetFloat("Speed", Mathf.Abs(h));
 
@@ -77,6 +84,21 @@ public class InputScript : MonoBehaviour
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
         }
+
+		if (onLadder) {
+			climbVelocity = climbSpeed * v;
+			if (h != 0) {
+				rb2d.gravityScale = gravityStore;
+			} else {
+				if (climbVelocity != 0) {
+					rb2d.gravityScale = 0f;
+					rb2d.velocity = new Vector2 (rb2d.velocity.x, climbVelocity);
+				}
+			}
+		}
+		if (!onLadder) {
+			rb2d.gravityScale = gravityStore;
+		}
     }
 
 
