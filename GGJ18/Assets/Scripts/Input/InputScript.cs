@@ -12,6 +12,7 @@ public class InputScript : MonoBehaviour
     public float maxSpeed = 5f;
     public float jumpForce = 1000f;
     public Transform groundCheck;
+    public Canvas menu;
 
 	public bool onLadder;
 	public float climbSpeed;
@@ -37,10 +38,25 @@ public class InputScript : MonoBehaviour
     {
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         Debug.Log(grounded);
-
+        if (grounded)
+        {
+            anim.SetBool("jumpcomplete", true);
+        }
+        else
+        {
+            anim.SetBool("jumpcomplete", false);
+        }
         if (Input.GetButtonDown("Jump") && grounded)
         {
             jump = true;
+        }
+
+        if(Input.GetButtonDown("Menu") && !menu.gameObject.active)
+        {
+            menu.gameObject.SetActive(true);
+        }else if(Input.GetButtonDown("Menu") && menu.gameObject.active)
+        {
+            menu.gameObject.SetActive(false);
         }
     }
 

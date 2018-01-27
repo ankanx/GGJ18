@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Demo/Ladders.unity
+=======
+- path: Assets/Scenes/Levels/New_game2.unity
+>>>>>>> menuoverlay
   isLoaded: 1
   isActive: 1
