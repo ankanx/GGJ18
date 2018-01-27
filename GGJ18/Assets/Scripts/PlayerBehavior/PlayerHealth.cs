@@ -13,14 +13,13 @@ public class PlayerHealth : MonoBehaviour
     private long msec = 0;
     private DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
     private bool damaged = false;
-	GameObject go;
+	public GameObject GameOver;
     
     void Awake ()
     {
-	go = GameObject.Find("gameover");
-	go.SetActive(false);
+	
         currentHealth = startingHealth;
-	TakeDamage(0);
+	    TakeDamage(0);
         msec = 0;
     }
 
@@ -62,8 +61,8 @@ public class PlayerHealth : MonoBehaviour
     }
 
        public void Death() {
-	gameObject.GetComponent<InputScript>().enabled = false;
-	go.SetActive(true);
+	    gameObject.GetComponent<InputScript>().enabled = false;
+        GameOver.SetActive(true);
     }
 
 }
