@@ -19,6 +19,7 @@ public class Checkpoint : MonoBehaviour {
         if (collision.name == "Player")
         {
             levelManager.currentCheckpoint = gameObject;
+            GetComponent<SpriteRenderer>().color = new Color(0.388235229f, 0.3372549f, 1f);
         }
     }
 }
