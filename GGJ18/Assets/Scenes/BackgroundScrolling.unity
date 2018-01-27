@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 123499547}
-  - component: {fileID: 123499548}
+  - component: {fileID: 123499549}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -145,7 +145,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &123499548
+--- !u!114 &123499549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 123499546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8101f0888214fe44292d81e1e8373bb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 048daeb134cdb1c459c65e3c3e2b208a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scrolling: 0
@@ -493,12 +493,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2f12c1193b21614f90cc93cda7e2c2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fecfa084dbe43b349b8f3cc9a8f82a36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.3, y: 11.72}
+  m_Size: {x: 7, y: 3.29}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -553,7 +553,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2f12c1193b21614f90cc93cda7e2c2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fecfa084dbe43b349b8f3cc9a8f82a36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -639,7 +639,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2f12c1193b21614f90cc93cda7e2c2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fecfa084dbe43b349b8f3cc9a8f82a36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
