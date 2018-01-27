@@ -30,6 +30,11 @@ public class PlayerHealth : MonoBehaviour
 	}
     }
 
+    public void GainLife(int amount)
+    {
+        currentHealth += amount;
+    }
+
     public void TakeDamage (int amount)
     {
 	long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
