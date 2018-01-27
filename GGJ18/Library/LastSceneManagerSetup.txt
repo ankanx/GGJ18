@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Demo/Zombie_testscnene.unity
-=======
-- path: Assets/Scenes/Levels/New_game2.unity
->>>>>>> mergebranch1
   isLoaded: 1
   isActive: 1
