@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Levels/New_game2.unity
-=======
-- path: Assets/Scenes/BackgroundScrolling.unity
->>>>>>> backgroundScroll
   isLoaded: 1
   isActive: 1
