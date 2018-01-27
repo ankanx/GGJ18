@@ -1,5 +1,10 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 4c0daaae9ede9994da625705637b3439
+folderAsset: yes
+timeCreated: 1517072037
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 guid: 6a3716045a7eb5a4098797c18bd7b8da
 folderAsset: yes
@@ -14,6 +19,7 @@ guid: cf5cd49fe8cf38144a72029d00b05f55
 folderAsset: yes
 timeCreated: 1517071168
 >>>>>>> backgroundScroll
+>>>>>>> mergebranch1
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

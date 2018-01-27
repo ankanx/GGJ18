@@ -408,6 +408,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114648240737201838, guid: dc8b01a7c93dac34688291de85600ca1,
+        type: 2}
+      propertyPath: force
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc8b01a7c93dac34688291de85600ca1, type: 2}
   m_IsPrefabParent: 0
@@ -773,6 +778,7 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 1000
   groundCheck: {fileID: 309526474}
+  menu: {fileID: 0}
 --- !u!4 &2132930422
 Transform:
   m_ObjectHideFlags: 0
@@ -816,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc419d14dfc1b0b43b3c1bcff8f345ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1370047426584254, guid: 0c274d3556afaec478d1f072370445e5, type: 2}
+  projectile: {fileID: 1710378143873258, guid: 0c274d3556afaec478d1f072370445e5, type: 2}
   velocity: {x: 5, y: 0}
   fartTime: 1
   offset: {x: 0.6, y: -0.011}
