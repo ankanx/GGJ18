@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour {
 
@@ -9,5 +10,6 @@ public class NextLevel : MonoBehaviour {
 	public void Activate()
 	{
 		//Next level stuff
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }
