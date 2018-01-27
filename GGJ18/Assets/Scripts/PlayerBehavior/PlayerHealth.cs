@@ -13,11 +13,10 @@ public class PlayerHealth : MonoBehaviour
     private long msec = 0;
     private DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
     private bool damaged = false;
-	public GameObject GameOver;
+    public GameObject GameOver;
     
     void Awake ()
     {
-	
         currentHealth = startingHealth;
 	    TakeDamage(0);
         msec = 0;
@@ -25,24 +24,24 @@ public class PlayerHealth : MonoBehaviour
 
     void Update ()
     {
-	if (damaged) {
-		this.TakeDamage(takeDamage);	
-	}
+		if (damaged) {
+			this.TakeDamage(takeDamage);	
+		}
     }
 
     public void TakeDamage (int amount)
     {
-	long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
-	if (msec + 500 > now)
-		return;
-	msec = now;
+		long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
+		if (msec + 500 > now)
+			return;
+		msec = now;
         currentHealth -= amount;
 
-	if (currentHealth < 0) {
-		Death();
+		if (currentHealth < 0) {
+			Death();
+		}
+			healthSlider.value = currentHealth; 
 	}
-	healthSlider.value = currentHealth; 
-    }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -57,12 +56,12 @@ public class PlayerHealth : MonoBehaviour
         if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "deadly") {
 		this.damaged = false;
 
-	}
+		}
     }
 
-       public void Death() {
-	    gameObject.GetComponent<InputScript>().enabled = false;
-        GameOver.SetActive(true);
+    public void Death() {
+		gameObject.GetComponent<InputScript>().enabled = false;
+		GameOver.SetActive(true);
     }
 
 }

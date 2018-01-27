@@ -6,17 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour {
 	
 	public void Quit() {
-		//Application.Quit();
+		Application.Quit();
 	}
 	
 	public void Retry () {
-		//Debug.Log("Retry");
-		//Application.LoadLevel(Application.loadedLevel);
+		 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void Menu() {
-		//Debug.Log("TODO Menu() in GameOver script.");
-		 //SceneManager.LoadScene("Menues");
+		SceneManager.LoadScene(1); // 1 is Main menu
 	}
 
 }
