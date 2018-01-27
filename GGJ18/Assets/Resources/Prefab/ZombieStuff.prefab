@@ -227,6 +227,9 @@ MonoBehaviour:
   timestill: 2
   sight: 2
   force: 20
+  detectWhat:
+    serializedVersion: 2
+    m_Bits: 4294967291
 --- !u!212 &212884132978600692
 SpriteRenderer:
   m_ObjectHideFlags: 1

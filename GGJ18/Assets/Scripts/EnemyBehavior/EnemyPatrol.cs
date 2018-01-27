@@ -9,7 +9,10 @@ public class EnemyPatrol : MonoBehaviour {
     public float speed = 0.5f;
     public float timestill = 2.0f;
     public float sight = 3f;
-    public float force; 
+    public float force;
+
+    public LayerMask detectWhat;
+
 
     Animator anim; 
 
@@ -25,11 +28,10 @@ public class EnemyPatrol : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.localScale.x * Vector2.right, sight);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.localScale.x * Vector2.right, sight, detectWhat);
         if (hit.collider != null && hit.collider.tag == "Player")
         {
             GetComponent<Rigidbody2D>().AddForce(Vector3.up * force + (hit.collider.transform.position - transform.position) * force);
-            Debug.Log("did do some");
         }
             
 	}
@@ -67,7 +69,7 @@ public class EnemyPatrol : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Projectile")
+        if (other.tag == "Pesticide")
             Destroy(this.gameObject, 0.1f);
     }
 
