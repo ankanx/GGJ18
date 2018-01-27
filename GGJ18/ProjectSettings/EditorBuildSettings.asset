@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/New_game2.unity
     guid: c808094c669c1264cb7b0a6a9a15ca88
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level0.unity
+    guid: f45f8dde81c808c43aa592b3a8f6d6da
