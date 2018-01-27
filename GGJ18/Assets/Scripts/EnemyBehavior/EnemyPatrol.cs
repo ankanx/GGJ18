@@ -13,6 +13,7 @@ public class EnemyPatrol : MonoBehaviour {
 
     public LayerMask detectWhat;
 
+    protected bool dead = false;
 
     Animator anim; 
 
@@ -21,6 +22,7 @@ public class EnemyPatrol : MonoBehaviour {
         anim = GetComponent<Animator>();
         StartCoroutine("Patrol");
         anim.SetBool("walking", true);
+        anim.SetBool("dead", false);
         Physics2D.queriesStartInColliders = false;
 
     }
@@ -28,17 +30,22 @@ public class EnemyPatrol : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.localScale.x * Vector2.right, sight, detectWhat);
-        if (hit.collider != null && hit.collider.tag == "Player")
+        if (dead == false)
         {
-            GetComponent<Rigidbody2D>().AddForce(Vector3.up * force + (hit.collider.transform.position - transform.position) * force);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.localScale.x * Vector2.right, sight, detectWhat);
+            if (hit.collider != null && hit.collider.tag == "Player")
+            {
+                GetComponent<Rigidbody2D>().AddForce(Vector3.up * force + (hit.collider.transform.position - transform.position) * force);
+            }
+
         }
+
             
 	}
 
     IEnumerator Patrol ()
     {
-        while (true)
+        while (dead == false)
         {
             if (transform.position.x == patrolpoints[currentPoint].position.x)
             {
@@ -65,12 +72,17 @@ public class EnemyPatrol : MonoBehaviour {
             //yield return new WaitForSeconds(4f);
 
         }
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Pesticide")
-            Destroy(this.gameObject, 0.1f);
+        {
+            dead = true;
+            anim.SetBool("dead", true);
+            //Destroy(this.gameObject, 0.1f);
+        }
     }
 
     private void OnDrawGizmos()
