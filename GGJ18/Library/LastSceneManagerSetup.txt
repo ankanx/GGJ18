@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/Level4.unity
+=======
+- path: Assets/Scenes/Menues/MainMenu.unity
+>>>>>>> timetobreakstuff
   isLoaded: 1
   isActive: 1
