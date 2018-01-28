@@ -81,7 +81,8 @@ public class EnemyPatrol : MonoBehaviour {
         {
             dead = true;
             anim.SetBool("dead", true);
-            //Destroy(this.gameObject, 0.1f);
+            this.tag = "Untagged";
+            Destroy(this.gameObject, 2f);
         }
     }
 
