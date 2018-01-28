@@ -5,32 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Levels/SplashScreen.unity
     guid: 735e17dc97eb64043baf9dd634096548
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menues/MainMenu.unity
-<<<<<<< HEAD
-    guid: e09cfaf7cc1b33a45a2986193fdfc629
-  - enabled: 0
-=======
     guid: 2517869dfa8c98b49969326dbe05fd4c
   - enabled: 1
->>>>>>> afterdinnerbranch
     path: Assets/Scenes/Demo/Zombie_testscnene.unity
     guid: 0fad5684a07703f4a9db771f22e72868
-  - enabled: 0
-    path: Assets/Scenes/Levels/NewGame.unity
-    guid: 94a8b33b509710f42befc9c1f3bafc81
-<<<<<<< HEAD
-  - enabled: 0
-    path: Assets/Scenes/Levels/New_game2.unity
-    guid: c808094c669c1264cb7b0a6a9a15ca88
-  - enabled: 1
-    path: Assets/Scenes/Demo/Chekpoint_test.unity
-    guid: 29182fa7dc2542047b4c21f0f94a303e
-=======
   - enabled: 1
     path: Assets/Scenes/Levels/Level0.unity
     guid: f45f8dde81c808c43aa592b3a8f6d6da
->>>>>>> afterdinnerbranch
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: 39160ee707a95e043b0fe29873f2966b
