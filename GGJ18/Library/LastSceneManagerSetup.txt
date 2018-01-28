@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Levels/Level3.unity
+=======
+- path: Assets/Scenes/Levels/Credits.unity
+>>>>>>> afterdinnerbranch
   isLoaded: 1
   isActive: 1
