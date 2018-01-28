@@ -94,7 +94,7 @@ public class InputScript : MonoBehaviour
 
         if (jump)
         {
-            audio_source.PlayOneShot(audio_jump, 0.15f);
+            audio_source.PlayOneShot(audio_jump, 0.5f);
             anim.SetTrigger("Jump");
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
