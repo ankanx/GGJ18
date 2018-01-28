@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4932358805886836}
   - component: {fileID: 212290757516802678}
   - component: {fileID: 61346218797638280}
+  - component: {fileID: 114985780929502558}
   m_Layer: 0
   m_Name: DoorClosed
   m_TagString: Untagged
@@ -34,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1420939826198858}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.55, y: 0.08, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.36186218, y: -2.7216003, z: -5}
   m_LocalScale: {x: 0.47033, y: 0.4703304, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,6 +67,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &114985780929502558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1420939826198858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a139d3d9f073545ae80b9beb208f2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeto: {fileID: 21300000, guid: 03e91b5e52cabe243bb5a477a6e51d4f, type: 3}
+  thisSprite: {fileID: 21300000, guid: b3a59542f368eb34e93cee30538cafa9, type: 3}
 --- !u!212 &212290757516802678
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,7 +113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3a59542f368eb34e93cee30538cafa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
