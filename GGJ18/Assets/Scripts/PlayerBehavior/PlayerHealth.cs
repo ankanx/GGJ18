@@ -48,10 +48,10 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage(int amount)
     {
-        if (amount != 0)
-            audS.PlayOneShot(audio_takedamage, 0.01f);
+         if (amount != 0)
+            audS.PlayOneShot(audio_takedamage, 0.01f); 
 
         long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
 	    if (msec + 500 > now)
@@ -75,18 +75,21 @@ public class PlayerHealth : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "deadly") {
+        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "deadly")
+        {
 		this.damaged = true;
 		this.TakeDamage(takeDamage);
-	}
+	    }
     }
 
 	void OnCollisionExit2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "deadly") {
+        if (coll.gameObject.tag == "Enemy" || coll.gameObject.tag == "deadly")
+        {
 		this.damaged = false;
 
-	}
+	    }
+
     }
 
        public void Death() {

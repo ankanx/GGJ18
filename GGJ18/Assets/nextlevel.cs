@@ -19,7 +19,7 @@ public class nextlevel : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collisionInfo)
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.N) && collisionInfo.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(level);
         }
