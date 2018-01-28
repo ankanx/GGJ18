@@ -2,13 +2,10 @@ WindowsStandalone
 SceneListBegin?
 Assets/Scenes/Levels/SplashScreen.unity
 Assets/Scenes/Menues/MainMenu.unity
-Assets/Scenes/Demo/Zombie_testscnene.unity
-Assets/Scenes/Levels/Level0.unity
-Assets/Scenes/Levels/Level1.unity
-Assets/Scenes/Levels/Level2.unity
+Assets/Scenes/Levels/Level4.unity
+Assets/Scenes/Levels/Level3.unity
 Assets/Scenes/Levels/Level6.unity
 Assets/Scenes/Levels/Credits.unity
-Assets/Scenes/Levels/Level3.unity
 SceneListEnd?
 948fa7a4bc443031c66d59700857749b Assembly-CSharp.dll:.ActivateTextAtLine
 7ada64ef775865f76745681f86385d24 Assembly-CSharp.dll:.ScrollingBackground
@@ -181,4 +178,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.winnning
+bb0e90c53f2e02b26cd04e662f658169 Assembly-CSharp.dll:.nextlevel
+bb0e90c53f2e02b26cd04e662f658169 Assembly-CSharp.dll:.winnning
