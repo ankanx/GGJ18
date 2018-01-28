@@ -54,7 +54,7 @@ public class TextBoxManager : MonoBehaviour {
         }
 
         if(currentLine > endAtLine){
-            textBox.SetActive(false);
+            DisableTextBox();
         }
 	}
 
