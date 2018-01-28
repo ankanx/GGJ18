@@ -23,6 +23,14 @@ public class EnemyPatrol : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        for(int i = 0; i < patrolpoints.Length; i++)
+        {
+            if(patrolpoints[i] == null)
+            {
+                patrolpoints[i] = gameObject.transform;
+            }
+        }
         anim = GetComponent<Animator>();
         StartCoroutine("Patrol");
         anim.SetBool("walking", true);
@@ -51,6 +59,8 @@ public class EnemyPatrol : MonoBehaviour {
     {
         while (dead == false)
         {
+
+
             if (transform.position.x == patrolpoints[currentPoint].position.x)
             {
                 currentPoint++;
@@ -66,7 +76,7 @@ public class EnemyPatrol : MonoBehaviour {
 
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(patrolpoints[currentPoint].position.x, transform.position.y), speed);
 
-            audio_source.PlayOneShot(audio_walk, 0.03f);
+            //audio_source.PlayOneShot(audio_walk, 0.03f);
 
             if (transform.position.x > patrolpoints[currentPoint].position.x)
                 transform.localScale = new Vector3(-1, 1, 1);

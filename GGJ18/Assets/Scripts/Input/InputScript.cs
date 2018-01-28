@@ -46,9 +46,11 @@ public class InputScript : MonoBehaviour
     void Update()
     {
         grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
-        Debug.Log(grounded);
+
+
         if (grounded)
         {
+            
             anim.SetBool("jumpcomplete", true);
         }
         else
@@ -79,7 +81,7 @@ public class InputScript : MonoBehaviour
         if (Input.GetAxis("Horizontal") == 0 && grounded)
                  {
           rb2d.velocity = new Vector2(0, 0);
-          Debug.Log("stop");
+          
         }
 
         if (h * rb2d.velocity.x < maxSpeed)
@@ -95,7 +97,7 @@ public class InputScript : MonoBehaviour
 
         if (jump)
         {
-            audio_source.PlayOneShot(audio_jump, 0.5f);
+            //audio_source.PlayOneShot(audio_jump, 0.5f);
             anim.SetTrigger("Jump");
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
@@ -108,7 +110,7 @@ public class InputScript : MonoBehaviour
 				rb2d.gravityScale = gravityStore;
 			} else {
 				if (climbVelocity != 0) {
-                    audio_source.PlayOneShot(audio_ladder, 0.1f);
+                    //audio_source.PlayOneShot(audio_ladder, 0.1f);
                     rb2d.gravityScale = 0f;
 					rb2d.velocity = new Vector2 (rb2d.velocity.x, climbVelocity);
 				}

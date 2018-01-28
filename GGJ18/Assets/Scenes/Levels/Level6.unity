@@ -167,7 +167,7 @@ Prefab:
     - target: {fileID: 114809839646959254, guid: 129d502a35036f94ab8cfb6e8adbb967,
         type: 2}
       propertyPath: life
-      value: 200
+      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 129d502a35036f94ab8cfb6e8adbb967, type: 2}
@@ -5877,7 +5877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ea6ac5dd64ca643ba2a375b6a385fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 4
+  level: 6
 --- !u!1 &582656439
 GameObject:
   m_ObjectHideFlags: 0
@@ -12899,7 +12899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCheckpoint: {fileID: 1628412775}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 1252591434}
 --- !u!4 &1225997936
 Transform:
   m_ObjectHideFlags: 0
