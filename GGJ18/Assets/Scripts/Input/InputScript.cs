@@ -70,6 +70,12 @@ public class InputScript : MonoBehaviour
 
         anim.SetFloat("Speed", Mathf.Abs(h));
 
+        if(Input.GetAxis("Horizontal") == 0 && grounded)
+        {
+            rb2d.velocity = new Vector2(0, 0);
+            Debug.Log("stop");
+        }
+
         if (h * rb2d.velocity.x < maxSpeed)
             rb2d.AddForce(Vector2.right * h * moveForce);
 
