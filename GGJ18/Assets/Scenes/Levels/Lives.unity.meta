@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:GGJ18/Assets/Scenes/Levels/Lives.unity.meta
+guid: 6fd6fccb9343e6340a8e13bbd129f512
+timeCreated: 1517082902
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+guid: b1068cd002260d346b5924d3f3099fe9
+folderAsset: yes
+timeCreated: 1517084571
+=======
+guid: 4c0daaae9ede9994da625705637b3439
+folderAsset: yes
+timeCreated: 1517083292
+>>>>>>> checkpoint
+=======
+guid: bbfe9fc997b9b1d4da1151a3f8253dc2
+folderAsset: yes
+timeCreated: 1517089681
+>>>>>>> checkpoint
+>>>>>>> afterdinnerbranch:GGJ18/Assets/Resources/Materials.meta
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
