@@ -655,6 +655,11 @@ Transform:
   m_Father: {fileID: 1073354281}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &332784642 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1311928692832712, guid: ccf5d4986f5703d428e2cda12181e30c,
+    type: 2}
+  m_PrefabInternal: {fileID: 420949366}
 --- !u!1 &352576260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,9 +1378,40 @@ Prefab:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 568597095}
+    - target: {fileID: 114288154586468718, guid: ccf5d4986f5703d428e2cda12181e30c,
+        type: 2}
+      propertyPath: climbSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288154586468718, guid: ccf5d4986f5703d428e2cda12181e30c,
+        type: 2}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 1880964434}
+    - target: {fileID: 114288154586468718, guid: ccf5d4986f5703d428e2cda12181e30c,
+        type: 2}
+      propertyPath: playerHp
+      value: 
+      objectReference: {fileID: 420949367}
+    - target: {fileID: 224645594305055428, guid: ccf5d4986f5703d428e2cda12181e30c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224645594305055428, guid: ccf5d4986f5703d428e2cda12181e30c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccf5d4986f5703d428e2cda12181e30c, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &420949367 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114029665966247988, guid: ccf5d4986f5703d428e2cda12181e30c,
+    type: 2}
+  m_PrefabInternal: {fileID: 420949366}
+  m_Script: {fileID: 11500000, guid: 4aa15f9ef32b548388c32aa2ce4b3b7a, type: 3}
 --- !u!1 &454062426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99f1f53bab6fad4681ce8a7e831696a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 332784642}
   thiscamera: {fileID: 511968014}
 --- !u!81 &511968016
 AudioListener:
@@ -1574,7 +1610,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511968013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.1771986, y: 2.9575038, z: -15.358198}
+  m_LocalPosition: {x: -2.1771986, y: 4.84, z: -15.358198}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1880964440}
@@ -4167,6 +4203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
+  take_checkpoint: {fileID: 0}
+  audio_source: {fileID: 0}
 --- !u!1 &1423795801
 GameObject:
   m_ObjectHideFlags: 0
