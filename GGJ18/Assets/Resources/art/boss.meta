@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GGJ18/Assets/Resources/art/boss.meta
 guid: bb7141e101468cd40ad6386188ca9130
 folderAsset: yes
 timeCreated: 1517087228
+=======
+guid: 459541ea225822a4f80eeb8ddc094953
+folderAsset: yes
+timeCreated: 1517101409
+>>>>>>> afterdinnerbranch:GGJ18/Assets/Resources/Materials.meta
 licenseType: Free
 DefaultImporter:
   externalObjects: {}

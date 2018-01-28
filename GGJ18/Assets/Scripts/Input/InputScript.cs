@@ -24,6 +24,8 @@ public class InputScript : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb2d;
 
+    public PlayerHealth playerHp;
+
 
     // Use this for initialization
     void Awake()
@@ -31,6 +33,7 @@ public class InputScript : MonoBehaviour
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
 		gravityStore = rb2d.gravityScale;
+        playerHp = GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -108,5 +111,13 @@ public class InputScript : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Cookie")){
+            Destroy(collision.gameObject);
+            playerHp.GainLife(15);
+        }
     }
 }
