@@ -15,10 +15,14 @@ public class EnemyPatrol : MonoBehaviour {
 
     protected bool dead = false;
 
-    Animator anim; 
+    Animator anim;
 
-	// Use this for initialization
-	void Start () {
+    public AudioClip audio_walk;
+
+    public AudioSource audio_source;
+
+    // Use this for initialization
+    void Start () {
         anim = GetComponent<Animator>();
         StartCoroutine("Patrol");
         anim.SetBool("walking", true);
@@ -61,6 +65,8 @@ public class EnemyPatrol : MonoBehaviour {
             }
 
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(patrolpoints[currentPoint].position.x, transform.position.y), speed);
+
+            audio_source.PlayOneShot(audio_walk, 0.03f);
 
             if (transform.position.x > patrolpoints[currentPoint].position.x)
                 transform.localScale = new Vector3(-1, 1, 1);

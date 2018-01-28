@@ -51,11 +51,13 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage (int amount)
     {
         if (amount != 0)
-            audS.PlayOneShot(audio_takedamage, 0.05f);
-	long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
-	if (msec + 500 > now)
-		return;
-	msec = now;
+            audS.PlayOneShot(audio_takedamage, 0.01f);
+
+        long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
+	    if (msec + 500 > now)
+		    return;
+
+        msec = now;
         currentHealth -= amount;
 
 	if (currentHealth < 0) {

@@ -26,6 +26,11 @@ public class InputScript : MonoBehaviour
 
     public PlayerHealth playerHp;
 
+    public AudioClip audio_jump;
+    public AudioClip audio_walk;
+
+    public AudioSource audio_source;
+
 
     // Use this for initialization
     void Awake()
@@ -89,6 +94,7 @@ public class InputScript : MonoBehaviour
 
         if (jump)
         {
+            audio_source.PlayOneShot(audio_jump, 0.15f);
             anim.SetTrigger("Jump");
             rb2d.AddForce(new Vector2(0f, jumpForce));
             jump = false;
