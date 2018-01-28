@@ -1,2 +1,6 @@
-Gardener: What happened here?
-I dunno....
+Use the A and D keys to move around.
+You can jump by pressing the 'Space' bar.
+Smite your enemies with the 'M' key!
+Checkpoints can be found throughout the levels.
+Use the 'N' key to open doors.
+Good luck!
