@@ -37,6 +37,7 @@ public class PlayerHealth : MonoBehaviour
     public void GainLife(int amount)
     {
         currentHealth += amount;
+        healthSlider.value = currentHealth;
     }
 
     public void TakeDamage (int amount)
