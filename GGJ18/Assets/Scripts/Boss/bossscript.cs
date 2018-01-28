@@ -94,6 +94,7 @@ public class bossscript : MonoBehaviour {
                 yield return null;
             }
 
+            
 
             yield return new WaitForSeconds(1f);
             //GetComponent<Rigidbody2D>().isKinematic = false;
@@ -101,9 +102,8 @@ public class bossscript : MonoBehaviour {
             while (transform.position.x != playerPos.x)
             {
                 playerPos = player.transform.position;
-
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y), speed);
-                Debug.Log("attacking player");
+
                 yield return null;
             }
 
@@ -129,9 +129,7 @@ public class bossscript : MonoBehaviour {
             }
             
 
-            
-
-            Debug.Log("ending");
+            yield return null;
 
         }
 
