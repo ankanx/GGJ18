@@ -6,10 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour {
 	
 	public void Quit() {
-		Application.Quit();
-	}
-	
-	public void Retry () {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit ();
+#endif
+    }
+
+    public void Retry () {
 		Application.LoadLevel(Application.loadedLevel);
 	}
 
