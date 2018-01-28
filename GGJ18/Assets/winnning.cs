@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class winnning : MonoBehaviour {
-
+    public int level;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,7 +18,7 @@ public class winnning : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(level);
         }
 
     }
