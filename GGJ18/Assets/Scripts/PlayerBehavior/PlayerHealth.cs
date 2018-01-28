@@ -42,10 +42,10 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
-	    long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
-	    if (msec + 500 > now)
+	long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
+	if (msec + 500 > now)
 		return;
-	    msec = now;
+	msec = now;
         currentHealth -= amount;
 
 	if (currentHealth < 0) {
