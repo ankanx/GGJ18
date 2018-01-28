@@ -17,6 +17,13 @@ public class PlayerHealth : MonoBehaviour
 	private LivesManager livesLeft;
 
 	public LevelManager levelManager;
+
+    public AudioClip audio_gainlife;
+    public AudioClip audio_respawn;
+    public AudioClip audio_takedamage;
+    public AudioClip audio_death;
+
+    public AudioSource audS;
     
     void Awake ()
     {
@@ -36,16 +43,21 @@ public class PlayerHealth : MonoBehaviour
 
     public void GainLife(int amount)
     {
+        audS.PlayOneShot(audio_gainlife, 0.4f);
         currentHealth += amount;
         healthSlider.value = currentHealth;
     }
 
     public void TakeDamage (int amount)
     {
-	long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
-	if (msec + 500 > now)
-		return;
-	msec = now;
+        if (amount != 0)
+            audS.PlayOneShot(audio_takedamage, 0.01f);
+
+        long now = Convert.ToInt64((DateTime.Now - epoch).TotalMilliseconds);
+	    if (msec + 500 > now)
+		    return;
+
+        msec = now;
         currentHealth -= amount;
 
 	if (currentHealth < 0) {
@@ -78,12 +90,14 @@ public class PlayerHealth : MonoBehaviour
     }
 
        public void Death() {
-	    gameObject.GetComponent<InputScript>().enabled = false;
+        audS.PlayOneShot(audio_death, 0.6f);
+        gameObject.GetComponent<InputScript>().enabled = false;
         GameOver.SetActive(true);
     }
 
 	public void ResetHealth(){
-		currentHealth = 100;
+        audS.PlayOneShot(audio_respawn, 0.6f);
+        currentHealth = 100;
 		healthSlider.value = currentHealth;
 	}
 

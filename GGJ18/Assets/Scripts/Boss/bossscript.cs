@@ -42,102 +42,111 @@ public class bossscript : MonoBehaviour {
 
         if (life < 0)
         {
+            foreach (Collider2D c in GetComponents<Collider2D>())
+            {
+                c.enabled = false;
+            }
             dead = true;
-            //anim.SetBool("dead", true);
+            this.tag = "Untagged";
+            anim.SetBool("dead", true);
             Debug.Log("YOU WOOOONNNNNN");
             anim.SetBool("sad", true);
+            StopCoroutine("boss");
+            
 
         }
     }
 
     IEnumerator boss()
     {
-        while (true)
+        while (dead == false)
         {
-            //FIRST ATTACK
+                //FIRST ATTACK
 
-            while (transform.position.x != spots[0].position.x)
-            {
-                anim.SetBool("sad", false);
+                while (transform.position.x != spots[0].position.x)
+                {
+                    anim.SetBool("sad", false);
 
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[0].position.x, transform.position.y), speed);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[0].position.x, transform.position.y), speed);
 
-                yield return null;
-            }
+                    yield return null;
+                }
 
-            transform.localScale = new Vector2(-1, 1);
+                transform.localScale = new Vector2(-1, 1);
+
+                yield return new WaitForSeconds(1f);
+
+                int i = 0;
+                while (i < holes.Length)
+                {
+
+                    GameObject bullet = (GameObject)Instantiate(fart, holes[Random.Range(0, holes.Length)].position, Quaternion.identity);
+                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left * 5;
+
+                    Destroy(bullet, fartTime);
+
+                    i++;
+                    yield return new WaitForSeconds(.7f);
+                }
+
+
+                //SECOND ATTACK
+                //GetComponent<Rigidbody2D>().isKinematic = true;
+                while (transform.position != spots[2].position)
+                {
+                    anim.SetBool("sad", false);
+
+                    transform.position = Vector2.MoveTowards(transform.position, spots[2].position, speed);
+
+                    yield return null;
+                }
+
+
+
+                yield return new WaitForSeconds(1f);
+                //GetComponent<Rigidbody2D>().isKinematic = false;
+
+                while (transform.position.x != playerPos.x)
+                {
+                    playerPos = player.transform.position;
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y), speed);
+
+                    yield return null;
+                }
+
+                this.tag = "Untagged";
+                anim.SetBool("angery", true);
+                vulnerable = false;
+                yield return new WaitForSeconds(3);
+                this.tag = "deadly";
+                anim.SetBool("angery", false);
+                vulnerable = true;
+
+                //THIRD ATTACK
+                Transform temp;
+                if (transform.position.x > player.transform.position.x)
+                    temp = spots[1];
+                else
+                    temp = spots[0];
+
+                while (transform.position.x != temp.position.x)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(temp.position.x, transform.position.y), speed);
+                    yield return null;
+                }
+
+
             
-            yield return new WaitForSeconds(1f);
-
-            int i = 0;
-            while (i < 6)
-            {
-
-                GameObject bullet = (GameObject)Instantiate(fart, holes[Random.Range(0, spots.Length)].position, Quaternion.identity);
-                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left * 5;
-
-                Destroy(bullet, fartTime);
-
-                i++;
-                yield return new WaitForSeconds(.7f);
-            }
-
-
-            //SECOND ATTACK
-            //GetComponent<Rigidbody2D>().isKinematic = true;
-            while (transform.position != spots[2].position)
-            {
-                anim.SetBool("sad", false);
-
-                transform.position = Vector2.MoveTowards(transform.position, spots[2].position, speed);
-
-                yield return null;
-            }
-
-            playerPos = player.transform.position;
-
-            yield return new WaitForSeconds(1f);
-            //GetComponent<Rigidbody2D>().isKinematic = false;
-
-            while (transform.position.x != playerPos.x)
-            {
-
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y), speed);
-
-                yield return null;
-            }
-
-            this.tag = "Untagged";
-            anim.SetBool("angery", true);
-            vulnerable = false;
-            yield return new WaitForSeconds(3);
-            this.tag = "deadly";
-            anim.SetBool("angery", false);
-            vulnerable = true;
-
-            //THIRD ATTACK
-            Transform temp;
-            if (transform.position.x > player.transform.position.x)
-                temp = spots[1];
-            else
-                temp = spots[0];
-
-            while (transform.position.x != temp.position.x)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector2(temp.position.x, transform.position.y), speed);
-                yield return null;
-            }
-            
-
-            yield return null;
+           
 
         }
+
 
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.tag == "Pesticide") && (vulnerable == true))
+        if ((other.tag == "Pesticide") && (vulnerable == true) && !dead)
         {
             Debug.Log("HIT");
             //Destroy(this.gameObject, 0.1f);

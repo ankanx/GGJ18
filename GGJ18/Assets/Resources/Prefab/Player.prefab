@@ -97,6 +97,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1239814465513068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4389518209472958}
+  - component: {fileID: 82342784208383390}
+  m_Layer: 9
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1311928692832712
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +331,7 @@ Transform:
   - {fileID: 4658839820958588}
   - {fileID: 4241000165762098}
   - {fileID: 224169218073748968}
+  - {fileID: 4389518209472958}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -330,6 +347,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4219171758138218}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4389518209472958
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239814465513068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4219171758138218}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4658839820958588
 Transform:
@@ -389,6 +419,86 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7054987, y: 0.9381387}
   m_EdgeRadius: 0
+--- !u!82 &82342784208383390
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239814465513068}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.722
+  m_Pitch: 0.79
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95750621057926188
 Animator:
   serializedVersion: 3
@@ -454,6 +564,13 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 114230967917631596}
   takeDamage: 25
+  GameOver: {fileID: 1202474496515104}
+  levelManager: {fileID: 0}
+  audio_gainlife: {fileID: 8300000, guid: e9861717ec169b04c946fcacc0e6239b, type: 3}
+  audio_respawn: {fileID: 8300000, guid: f45eb32cfe9ac6849b2b325a688af68c, type: 3}
+  audio_takedamage: {fileID: 8300000, guid: 36e89bca7e52dff4a8c2ff414bbb0ee9, type: 3}
+  audio_death: {fileID: 8300000, guid: 97398cc0b61ff6542bae30798977182e, type: 3}
+  audS: {fileID: 82342784208383390}
 --- !u!114 &114149983612714928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -572,6 +689,8 @@ MonoBehaviour:
   fartTime: 1
   offset: {x: 1, y: 0}
   cooldown: 0.1
+  audio_fire: {fileID: 8300000, guid: d84970c19372c9c40b284b8e8af777a4, type: 3}
+  audio_source: {fileID: 82342784208383390}
 --- !u!114 &114275960452161842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -619,6 +738,11 @@ MonoBehaviour:
   menu: {fileID: 0}
   onLadder: 0
   climbSpeed: 0
+  playerHp: {fileID: 0}
+  audio_jump: {fileID: 8300000, guid: 409617f582ba49c4e94ce5bf20ab3870, type: 3}
+  audio_walk: {fileID: 8300000, guid: d1195077bd359e44b8dd8271d951c64e, type: 3}
+  audio_ladder: {fileID: 8300000, guid: cb946ffeb1ae86a478e3836cbdad05bd, type: 3}
+  audio_source: {fileID: 82342784208383390}
 --- !u!114 &114294287900049256
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menues/MainMenu.unity
     guid: 2517869dfa8c98b49969326dbe05fd4c
   - enabled: 1
-    path: Assets/Scenes/Demo/Zombie_testscnene.unity
-    guid: 0fad5684a07703f4a9db771f22e72868
+    path: Assets/Scenes/Levels/Level4.unity
+    guid: c42907e200968514fbeb8a07c7553ea0
   - enabled: 1
-    path: Assets/Scenes/Levels/Level0.unity
-    guid: f45f8dde81c808c43aa592b3a8f6d6da
+    path: Assets/Scenes/Levels/Level3.unity
+    guid: 8e7f9ab3b571bee4f96d61da4036bafc
   - enabled: 1
-    path: Assets/Scenes/Levels/Level1.unity
-    guid: 39160ee707a95e043b0fe29873f2966b
+    path: Assets/Scenes/Levels/Level5.unity
+    guid: 098d9a70361044c38a51e2028b1e63bf
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level6.unity
+    guid: 44ee7a23ab48c7e479ee647e4efbb5e5
+  - enabled: 1
+    path: Assets/Scenes/Levels/Credits.unity
+    guid: 738253bbeed6aeb44b284a66d911da2b
