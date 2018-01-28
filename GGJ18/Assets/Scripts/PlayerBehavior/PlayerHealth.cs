@@ -14,13 +14,17 @@ public class PlayerHealth : MonoBehaviour
     private DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
     private bool damaged = false;
 	public GameObject GameOver;
+	private LivesManager livesLeft;
+
+	public LevelManager levelManager;
     
     void Awake ()
     {
-	
         currentHealth = startingHealth;
 	    TakeDamage(0);
         msec = 0;
+		levelManager = FindObjectOfType<LevelManager> ();
+		livesLeft = FindObjectOfType<LivesManager> ();
     }
 
     void Update ()
@@ -28,6 +32,11 @@ public class PlayerHealth : MonoBehaviour
 	if (damaged) {
 		this.TakeDamage(takeDamage);	
 	}
+    }
+
+    public void GainLife(int amount)
+    {
+        currentHealth += amount;
     }
 
     public void TakeDamage (int amount)
@@ -39,10 +48,17 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
 
 	if (currentHealth < 0) {
-		Death();
-	}
-	healthSlider.value = currentHealth; 
+			if (livesLeft.DecreaseLives ()) {
+				ResetHealth ();
+				levelManager.RespawnPlayer ();
+			} else {
+				Death ();
+			}
+	} 
+		healthSlider.value = currentHealth;
     }
+
+
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -64,5 +80,10 @@ public class PlayerHealth : MonoBehaviour
 	    gameObject.GetComponent<InputScript>().enabled = false;
         GameOver.SetActive(true);
     }
+
+	public void ResetHealth(){
+		currentHealth = 100;
+		healthSlider.value = currentHealth;
+	}
 
 }

@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 735e17dc97eb64043baf9dd634096548
   - enabled: 1
     path: Assets/Scenes/Menues/MainMenu.unity
-    guid: e09cfaf7cc1b33a45a2986193fdfc629
+    guid: 2517869dfa8c98b49969326dbe05fd4c
   - enabled: 1
     path: Assets/Scenes/Demo/Zombie_testscnene.unity
     guid: 0fad5684a07703f4a9db771f22e72868
@@ -18,5 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/NewGame.unity
     guid: 94a8b33b509710f42befc9c1f3bafc81
   - enabled: 1
-    path: Assets/Scenes/Levels/New_game2.unity
-    guid: c808094c669c1264cb7b0a6a9a15ca88
+    path: Assets/Scenes/Levels/Level0.unity
+    guid: f45f8dde81c808c43aa592b3a8f6d6da
