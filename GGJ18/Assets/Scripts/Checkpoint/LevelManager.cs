@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
     public GameObject currentCheckpoint;
     private InputScript player;
+    public GameObject GameOver;
 
 	// Use this for initialization
 	void Start () {
@@ -20,5 +21,7 @@ public class LevelManager : MonoBehaviour {
     {
         Debug.Log("Player Respawn");
         player.transform.position = currentCheckpoint.transform.position;
+        player.enabled = true;
+        GameOver.SetActive(false);
     }
 }

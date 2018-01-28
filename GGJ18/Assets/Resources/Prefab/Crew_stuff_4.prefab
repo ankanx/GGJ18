@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114107585757399566}
   m_Layer: 0
   m_Name: crew_4_0
-  m_TagString: Untagged
+  m_TagString: deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4537622949617488}
   m_Layer: 0
   m_Name: Crew_stuff_4
-  m_TagString: Untagged
+  m_TagString: deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646827774937806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.17, y: -2.06, z: 0}
+  m_LocalPosition: {x: 7.31, y: 2.3559997, z: -5.34716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4417874718933756}
@@ -164,9 +164,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.028302297, y: -0.10905562}
+  m_Offset: {x: -0.028302297, y: -0.21875034}
   serializedVersion: 2
-  m_Radius: 0.10735835
+  m_Radius: 0.21705307
 --- !u!61 &61254625278149276
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -179,18 +179,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008490801, y: 0.090245545}
+  m_Offset: {x: -0.037566423, y: 0.20258325}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20365381, y: 0.2514633}
+  m_Size: {x: 0.69001055, y: 0.5660094}
   m_EdgeRadius: 0
 --- !u!95 &95912317657155514
 Animator:
@@ -221,8 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolpoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 4640963057003124}
+  - {fileID: 4812840580103594}
   speed: 0.05
   timestill: 2
   sight: 2
