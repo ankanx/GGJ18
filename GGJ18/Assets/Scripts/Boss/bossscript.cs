@@ -70,10 +70,10 @@ public class bossscript : MonoBehaviour {
             yield return new WaitForSeconds(1f);
 
             int i = 0;
-            while (i < 6)
+            while (i < holes.Length)
             {
 
-                GameObject bullet = (GameObject)Instantiate(fart, holes[Random.Range(0, spots.Length)].position, Quaternion.identity);
+                GameObject bullet = (GameObject)Instantiate(fart, holes[Random.Range(0, holes.Length)].position, Quaternion.identity);
                 bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left * 5;
 
                 Destroy(bullet, fartTime);
@@ -94,16 +94,16 @@ public class bossscript : MonoBehaviour {
                 yield return null;
             }
 
-            playerPos = player.transform.position;
 
             yield return new WaitForSeconds(1f);
             //GetComponent<Rigidbody2D>().isKinematic = false;
 
             while (transform.position.x != playerPos.x)
             {
+                playerPos = player.transform.position;
 
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(playerPos.x, transform.position.y), speed);
-
+                Debug.Log("attacking player");
                 yield return null;
             }
 
@@ -129,7 +129,9 @@ public class bossscript : MonoBehaviour {
             }
             
 
-            yield return null;
+            
+
+            Debug.Log("ending");
 
         }
 
