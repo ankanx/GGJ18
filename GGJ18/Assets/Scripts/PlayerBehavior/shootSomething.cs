@@ -13,10 +13,14 @@ public class shootSomething : MonoBehaviour {
     public Vector2 offset = new Vector2(0.4f, 0.1f);
     public float cooldown = 0.5f;
 
-    protected Vector3 vectorminus = new Vector3(-1, 1, 1); 
+    protected Vector3 vectorminus = new Vector3(-1, 1, 1);
 
-	// Use this for initialization
-	void Start () {
+    public AudioClip audio_fire;
+
+    public AudioSource audio_source;
+
+    // Use this for initialization
+    void Start () {
         
 	}
 	
@@ -28,6 +32,9 @@ public class shootSomething : MonoBehaviour {
             GameObject go = (GameObject) Instantiate(projectile, (Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
             //go.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * transform.localScale.x, velocity.y);
             Vector3 localScaleGo = go.transform.localScale;
+
+            audio_source.PlayOneShot(audio_fire, 0.6f);
+
 
             if (transform.localScale.x < 0)
             {
