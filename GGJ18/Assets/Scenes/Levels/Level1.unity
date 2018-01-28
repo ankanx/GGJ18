@@ -639,6 +639,16 @@ Prefab:
       propertyPath: maxSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 82936136433217382, guid: 52f354325643fbf4f884e9835030241f,
+        type: 2}
+      propertyPath: m_Pitch
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 82936136433217382, guid: 52f354325643fbf4f884e9835030241f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 13bc156e68bf2894cbd1290e20b7575d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52f354325643fbf4f884e9835030241f, type: 2}
   m_IsPrefabParent: 0

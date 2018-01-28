@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void GainLife(int amount)
     {
-        audS.PlayOneShot(audio_gainlife, 0.6f);
+        audS.PlayOneShot(audio_gainlife, 0.4f);
         currentHealth += amount;
         healthSlider.value = currentHealth;
     }

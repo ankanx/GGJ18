@@ -28,6 +28,7 @@ public class InputScript : MonoBehaviour
 
     public AudioClip audio_jump;
     public AudioClip audio_walk;
+    public AudioClip audio_ladder;
 
     public AudioSource audio_source;
 
@@ -101,12 +102,14 @@ public class InputScript : MonoBehaviour
         }
 
 		if (onLadder) {
-			climbVelocity = climbSpeed * v;
+
+            climbVelocity = climbSpeed * v;
 			if (h != 0) {
 				rb2d.gravityScale = gravityStore;
 			} else {
 				if (climbVelocity != 0) {
-					rb2d.gravityScale = 0f;
+                    audio_source.PlayOneShot(audio_ladder, 0.1f);
+                    rb2d.gravityScale = 0f;
 					rb2d.velocity = new Vector2 (rb2d.velocity.x, climbVelocity);
 				}
 			}
