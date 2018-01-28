@@ -6,7 +6,6 @@ Assets/Scenes/Demo/Zombie_testscnene.unity
 Assets/Scenes/Levels/Level0.unity
 Assets/Scenes/Levels/Level1.unity
 SceneListEnd?
-948fa7a4bc443031c66d59700857749b Assembly-CSharp.dll:.ActivateTextAtLine
 7ada64ef775865f76745681f86385d24 Assembly-CSharp.dll:.ScrollingBackground
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AnimSpeed
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuitOnClick
@@ -26,7 +25,6 @@ cbd7984ea58d0f313af7c9d92e57f9a8 Assembly-CSharp.dll:.SpawnItems
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Reset
 32e8fe00b63ed946490b898f6024a2f2 Facebook.Unity.Settings.dll:Facebook.Unity.Settings.FacebookSettings
-664dbcedbd4cd8f9d12cd11f833a80d5 Assembly-CSharp.dll:.TextImporter
 650c1e412dac0323d37ae3023565f947 Assembly-CSharp.dll:.assets
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PressStart
 3d409e1aebb12a9aee1ea28bb806ce35 Assembly-CSharp.dll:.InputScript
@@ -39,8 +37,8 @@ a53a9029296685c0704f8f8c1f027305 Assembly-CSharp.dll:.RngPlatforms
 2984409314dc1b9e169db47ef17bdb9a Assembly-CSharp.dll:.EnemyPatrol
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameOver
 2b62a1d8b55895187c50d48e46d6d569 Assembly-CSharp.dll:.PlayerHealth
+fc97a8d534685e587b7e0d7a3f191463 Assembly-CSharp.dll:.bossscript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DestroyItems
-fc7d73f561d9b173d43ae135744ee9b4 Assembly-CSharp.dll:.TextBoxManager
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
@@ -175,4 +173,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LivesManager
+fc7d73f561d9b173d43ae135744ee9b4 Assembly-CSharp.dll:.TextBoxManager
 47d0030183fdf5bd9f9d081b2ebc10b4 Assembly-CSharp.dll:.opendoorscript
+664dbcedbd4cd8f9d12cd11f833a80d5 Assembly-CSharp.dll:.TextImporter
+948fa7a4bc443031c66d59700857749b Assembly-CSharp.dll:.ActivateTextAtLine
